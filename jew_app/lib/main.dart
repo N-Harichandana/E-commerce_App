@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primaryColor: Colors.purple,
             ),
+            debugShowCheckedModeBanner: false,
             home: auth.isAuth
                 ? ProductsoverviewScreen()
                 : FutureBuilder(
