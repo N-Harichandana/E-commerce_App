@@ -38,7 +38,7 @@ class ProductDetailScreen extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "\$${loadedproduct.price}",
+              "₹${loadedproduct.price}",
               style: TextStyle(color: Colors.black, fontSize: 20),
             ),
             SizedBox(

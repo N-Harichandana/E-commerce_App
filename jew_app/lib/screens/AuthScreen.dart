@@ -163,20 +163,19 @@ class _AuthcardState extends State<Authcard> {
   @override
   Widget build(BuildContext context) {
     final devicesize = MediaQuery.of(context).size;
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      elevation: 8.0,
-      child: Container(
-        height: _authMode == AuthMode.signup ? 380 : 280,
-        constraints:
-            BoxConstraints(minHeight: _authMode == AuthMode.signup ? 320 : 260),
-        width: devicesize.width * 0.75,
-        padding: EdgeInsets.all(16.0),
-        child: Form(
-            key: _formkey,
-            child: SingleChildScrollView(
-              padding: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).viewInsets.bottom),
+    return SingleChildScrollView(
+      child: Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        elevation: 8.0,
+        child: Container(
+          height: _authMode == AuthMode.signup ? 380 : 280,
+          constraints: BoxConstraints(
+              minHeight: _authMode == AuthMode.signup ? 320 : 260),
+          width: devicesize.width * 0.75,
+          padding: EdgeInsets.all(16.0),
+          child: Form(
+              key: _formkey,
               child: Column(
                 children: [
                   TextFormField(
@@ -246,15 +245,15 @@ class _AuthcardState extends State<Authcard> {
                   TextButton(
                     onPressed: switchAuthmode,
                     child: Text(
-                        '${_authMode == AuthMode.login ? "Signup" : "Login"} INSTEAD'),
+                        '${_authMode == AuthMode.login ? "Signup" : "Login"}'),
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all(
                           EdgeInsets.symmetric(horizontal: 30, vertical: 4)),
                     ),
                   )
                 ],
-              ),
-            )),
+              )),
+        ),
       ),
     );
   }
