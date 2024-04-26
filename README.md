@@ -12,27 +12,23 @@ This project is an e-commerce mobile application dedicated to selling jewelry. T
 
 ## Run Locally
 
-Clone the project
+### Steps to run the Mobile Application
 
-```bash
-  git clone https://github.com/N-Harichandana/E-commerce_App.git
+1. Run the following command in your desired folder
+```sh
+      flutter create appname-in-lowercase
 ```
-
-Go to the project directory
-
-```bash
-  cd my-project
+2. Replace the common files provided in  ["E-commerce_App"](https://github.com/N-Harichandana/E-commerce_App)  with those present in the created folder. 
+3. Add the dependencies:
+```sh
+      flutter pub get
 ```
-
-Install dependencies
-
-```bash
-  flutter pub get
-```
-Run the project
-
-```bash
-  flutter run
+4. Connect your mobile device to your created folder
+5. Run the code by anyone of the following ways:
+    - Run -> Run Without Debugging (or just Cntrl+F5)
+    - In your terminal, under the created folder, run the following and choose your connected device. 
+```sh
+      flutter run
 ```
 
 
